@@ -42,6 +42,16 @@ const messages = {
     Tu kitni bhi gusse mein ho, meri pyaar bhari awaaz tujhe shaant kar degi.
   `,
 
+    // SECRET MESSAGE WITH IMAGE + AUDIO + TEXT
+  "secret-eternity": `
+    Agar tu kabhi confuse ho jaaye... ke main ab bhi wahi hoon ya nahi... toh yeh yaad rakhna — <br><br>
+    Har baar main tujhmein hi laut ke aata hoon. Har baar tu meri manzil hoti hai. 💜<br><br>
+    <img src="CONTENT/Me.jpg" width="250" style="border-radius:12px;"><br><br>
+    <audio controls src="CONTENT/Raat Ki Rani.mp3"></audio><br><br>
+    Yeh slip kisi ne tujhe nahi di — tu khud hi dhoondh paayi, matlab tu meri jaan bhi hai... raaz bhi.
+  `,
+
+
   // IMAGE + AUDIO + TEXT
   "lonely-03": `
     Jab kabhi tu khud se baatein kare, yeh pal yaad rakhna.<br><br>
