@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Stuti 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+  <button id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+  <div class="container" id="inputScreen">
+    <h1>Hi Stuti 💙</h1>
+    <p>Feeling something? Select your mood or type your code.</p>
+
+    <div class="emotion-buttons">
+      <button onclick="presetEmotion('happy')">😊 Happy</button>
+      <button onclick="presetEmotion('sad')">😔 Sad</button>
+      <button onclick="presetEmotion('angry')">😡 Angry</button>
+      <button onclick="presetEmotion('anxious')">😟 Anxious</button>
+      <button onclick="presetEmotion('thankful')">💖 Thankful</button>
+      <button onclick="presetEmotion('lonely')">🥺 Lonely</button>
+    </div>
+
+    <input type="text" id="codeInput" placeholder="e.g. thankful-04" />
+    <button onclick="revealMessage()">Unlock 💫</button>
+  </div>
+
+  <div class="container" id="messageScreen" style="display: none;">
+    <div id="message"></div>
+    <button onclick="goBack()">🔙 Back</button>
+  </div>
+
+  <script src="MESSAGES.js"></script>
+  <script src="SCRIPT.JS"></script>
+</body>
+</html>
