@@ -10,26 +10,29 @@
 <body>
   <button id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-  <div class="container" id="inputScreen">
-    <h1>Hi Stuti 💙</h1>
-    <p>Feeling something? Select your mood or type your code.</p>
+  <!-- ✅ Add this wrapper -->
+  <div class="wrapper">
+    <div class="container" id="inputScreen">
+      <h1>Hi Stuti 💙</h1>
+      <p>Feeling something? Select your mood or type your code.</p>
 
-    <div class="emotion-buttons">
-      <button onclick="presetEmotion('happy')">😊 Happy</button>
-      <button onclick="presetEmotion('sad')">😔 Sad</button>
-      <button onclick="presetEmotion('angry')">😡 Angry</button>
-      <button onclick="presetEmotion('anxious')">😟 Anxious</button>
-      <button onclick="presetEmotion('thankful')">💖 Thankful</button>
-      <button onclick="presetEmotion('lonely')">🥺 Lonely</button>
+      <div class="emotion-buttons">
+        <button onclick="presetEmotion('happy')">😊 Happy</button>
+        <button onclick="presetEmotion('sad')">😔 Sad</button>
+        <button onclick="presetEmotion('angry')">😡 Angry</button>
+        <button onclick="presetEmotion('anxious')">😟 Anxious</button>
+        <button onclick="presetEmotion('thankful')">💖 Thankful</button>
+        <button onclick="presetEmotion('lonely')">🥺 Lonely</button>
+      </div>
+
+      <input type="text" id="codeInput" placeholder="e.g. thankful-04" />
+      <button onclick="revealMessage()">Unlock 💫</button>
     </div>
 
-    <input type="text" id="codeInput" placeholder="e.g. thankful-04" />
-    <button onclick="revealMessage()">Unlock 💫</button>
-  </div>
-
-  <div class="container" id="messageScreen" style="display: none;">
-    <div id="message"></div>
-    <button onclick="goBack()">🔙 Back</button>
+    <div class="container" id="messageScreen" style="display: none;">
+      <div id="message"></div>
+      <button class="back-button" onclick="goBack()">🔙 Back</button>
+    </div>
   </div>
 
   <script src="MESSAGES.js"></script>

@@ -9,12 +9,24 @@
 body {
   background: linear-gradient(135deg, #fce3ff, #e0c3fc);
   min-height: 100vh;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  flex-direction: column;
 }
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 100vh;
+  margin: auto 0;
+}
+
+
 
 #themeToggle {
   position: fixed;
@@ -35,14 +47,36 @@ body {
   padding: 25px;
   border-radius: 25px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 700px;
+  min-width: 300px;
+  min-height: 310px;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 20px;
+  position: relative;
+
+  resize: both;
+  overflow-x: hidden;
+  overflow-y: auto; /* ✅ Change this from auto → hidden */
 }
+
+.container::after {
+  cursor: se-resize;
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  bottom: 6px;
+  right: 6px;
+  background: linear-gradient(135deg, transparent 0%, #aaa 100%);
+  border-radius: 2px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 
 h1 {
   font-size: 26px;
@@ -107,17 +141,26 @@ button:hover {
 
 /* Long Message Support */
 #message {
-  max-height: 400px;
-  overflow-y: auto;
-  text-align: left;
-  font-size: 14px;
+  flex-grow: 1;              /* ✅ Expand to available space */
+  overflow-y: auto;          /* ✅ Allow vertical scroll */
+  text-align: justify;
+  font-size: 1rem;
   line-height: 1.6;
   color: #333;
   padding: 10px;
   border-radius: 10px;
   animation: fadeIn 0.4s ease-in-out;
   white-space: pre-wrap;
+  min-height: 100px;      /* ✅ Prevent collapsing if too small */
+  transition: all 0.3s ease;
 }
+
+.emotion-buttons button.active {
+  background-color: #8e44ad !important;
+  color: white !important;
+  border-color: #732d91 !important;
+}
+
 
 #message img {
   margin-top: 10px;
@@ -193,7 +236,46 @@ body.dark .emotion-buttons button:hover {
   background-color: #3c3c5a;
 }
 
+#messageScreen {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 300px;
+}
+
+.back-button {
+  width: 100%;
+  margin-top: auto;
+  padding: 12px;
+  background: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-button:hover {
+  background: #732d91;
+}
+
+body.dark .back-button {
+  background-color: #6c5ce7;
+}
+
+body.dark .back-button:hover {
+  background-color: #5c47c2;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 400px) {
+  .back-button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
