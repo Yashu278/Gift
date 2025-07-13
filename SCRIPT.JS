@@ -52,7 +52,7 @@ function presetEmotion(emotion) {
   // Responsive placeholder
   const placeholderText = window.innerWidth <= 400
     ? `Note # or code for ${emotion}`
-    : `Type note number for ${emotion}, or full code`;
+    : `Apna ${emotion} note ya code likhiye ji`;
 
   document.getElementById("codeInput").value = "";
   document.getElementById("codeInput").placeholder = placeholderText;

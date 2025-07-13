@@ -57,7 +57,8 @@ body {
   flex-direction: column;
   gap: 15px;
   position: relative;
-
+  scrollbar-width: none;           /* Firefox */
+  -ms-overflow-style: none;
   resize: both;
   overflow-x: hidden;
   overflow-y: auto; /* ✅ Change this from auto → hidden */
@@ -76,7 +77,9 @@ body {
   opacity: 0.3;
   pointer-events: none;
 }
-
+.container::-webkit-scrollbar {
+  display: none;                   /* Chrome/Safari */
+}
 
 h1 {
   font-size: 26px;
@@ -279,3 +282,11 @@ body.dark .back-button:hover {
     padding: 10px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
