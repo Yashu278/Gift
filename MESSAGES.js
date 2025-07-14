@@ -1,93 +1,3 @@
-// const messages = {
-//   "L31L12L23": `
-// <b>Stuti…</b>
-// Kabhi kabhi tu akeli mehsoos karti hai, even when you're surrounded by people...
-// <i><b>"Teri khamoshi mein bhi tune mujhe pukara tha...</b></i>
-// `,
-
-//   "L31L12L24": `
-// <b>Stuti…</b><br><br>
-// Yeh woh pal tha jab tu akeli thi...
-
-// <img src="CONTENT/AFP1.jpg" style="max-width: 100%; border-radius: 12px; margin-top: 10px;" />
-
-// <audio controls style="margin-top: 15px; width: 100%;">
-//   <source src="CONTENT/audio1.mp3" type="audio/mpeg" />
-//   Your browser does not support the audio element.
-// </audio>
-
-// <video controls style="margin-top: 15px; width: 100%; border-radius: 12px;">
-//   <source src="CONTENT/video1.mp4" type="video/mp4" />
-//   Your browser does not support the video tag.
-// </video>
-// `,
-
-//   "L31L12L25": `
-// <b>Stuti…</b><br><br>
-// Woh din yaad hai jab humne ek pal ke liye sab kuch bhula diya tha?<br>
-// Na duniya thi, na waqt — sirf <i>tu aur main</i>. Us pal ko maine sambhaal ke rakha hai…
-
-// <img src="CONTENT/SDP2.jpg" style="max-width: 100%; border-radius: 12px; margin-top: 10px;" />
-
-// <video controls style="margin-top: 15px; width: 100%; border-radius: 12px;">
-//   <source src="CONTENT/SNV1.mp4" type="video/mp4" />
-//   Your browser does not support the video tag.
-// </video>
-
-// <p style="margin-top: 15px;">
-// <i>“Kuch yaadein sirf yaadein nahi hoti — woh ek jagah hoti hain, jahan dil baar baar laut jaata hai.”</i>
-// </p>
-// `,
-//   "help-me-yash":`<h3><b>Hey Stuti 💌</b></h3><p><i>Sabse pehle... welcome to your own secret vault.</i></p><p>Yeh koi normal website nahi hai — yeh <i>tumhare liye likhi gayi love story</i> hai... code ke zariye.</p>
-// <h3>✨ What is this?</h3><p>Yeh ek <b>\"Secret Love Vault\"</b> hai — jahan har note, har image, har video... ek emotion, ek yaad, ya ek tareekh (date) ke peeche chhupa hua hai. Tumhe sirf code daalna hai... aur woh memory khul jaayegi 💫</p>
-
-// <h3>🔐 How to Use This</h3><p><b>1. Emotions se Access:</b></p>
-// <ul>
-//   <li>Screen par kuch emotions dikhenge — jaise \"Lonely\", \"Happy\", \"Proud\", etc.</li>
-//   <li>Kisi ek par click karo</li>
-//   <li>Ek <b>note number</b> daalo (jaise 3, 4, etc.)</li>
-//   <li>Yeh number + emotion milke ek secret code ban jaata hai (e.g. lonely-3)</li>
-//   <li>Enter karte hi... ✨ Magic!</li>
-// </ul>
-
-// <p><b>2. Direct Code se:</b></p>
-// <p>Agar tumhare paas koi <b>pure code</b> hai (jaise L31L12L24, L31L12L25) to woh bhi daal sakti ho — bina kisi emotion choose kiye.</p>
-
-// <p><b>3. \"help-me-yash\":</b></p>
-// <p>Agar kabhi kuch bhool jao ya samajh na aaye, just type this code: <code>help-me-yash</code></p>
-// <p>Main yahaan hoon… hamesha. 🤍</p>
-
-// <h3>💡 What's Inside?</h3>
-// <ul>
-//   <li>💬 <b>Messages</b>: Mere dil se nikle shabdon mein chhupi feelings</li>
-//   <li>🖼️ <b>Photos</b>: Tumhari ya hamari kuch khaas tasveerein</li>
-//   <li>🎧 <b>Audio/Voice</b>: Kuch baatein jo sirf sunne waali hoti hain</li>
-//   <li>🎥 <b>Videos</b>: Un lamhon ka jadoo jo record ho gaya tha</li>
-// </ul>
-
-// <h3>🌙 Bonus Tips</h3>
-// <ul>
-//   <li>🔄 <b>Dark/Light Mode</b> toggle kar sakti ho (Top-right 🌙/☀️ icon)</li>
-//   <li>📱 Yeh site mobile pe bhi fully responsive hai</li>
-//   <li>💔 Galat code daalogi to bhi kuch romantic line hi milegi 😅</li>
-//   <li>📂 Saari media files safe hain — koi online server nahi, sirf tumhare liye.</li>
-// </ul>
-
-// <h3>🫶 Final Words</h3>
-// <p><b>Stuti…</b></p>
-// <p>Yeh website ek gift nahi hai — yeh ek journey hai… <i>hamari</i> 💑</p>
-// <p>Kisi page ke peeche sirf text nahi, ek emotion chhupa hai. Tumhara hona, tumhara muskurana, tumhara sambhalna — sab kuch yahaan likha gaya hai.</p>
-// <p>Jab bhi tum akeli mehsoos karo... ya kuch yaad aaye... ya kuch padhna ho, bas ek code daalo.</p>
-// <p><i>Main tumhare liye likhta rahunga… hamesha.</i></p>
-
-// <p><b>With all my love,<br>— Yash 💙</b></p>
-//   `
-// };
-
-// // ✅ Direct aliasing — much cleaner than using emotionCodeMap
-// messages["lonely-3"] = messages["L31L12L23"];
-// messages["lonely-4"] = messages["L31L12L24"];
-// messages["lonely-5"] = messages["L31L12L25"];
 console.log("sadNotes exists?", typeof window.sadNotes);
 
 window.messages = {
@@ -111,4 +21,52 @@ sadAliases.forEach((realCode, index) => {
   window.messages[`sad-${index + 1}`] = window.messages[realCode];
 });
 
+// Create lonely-1 to lonely-15 aliases
+const lonelyAliases = [
+  "A05A10A23", "A08A10A23", "A14A10A23", "A23A10A23", "A18A11A23",
+  "A02A12A23", "A31A12A23", "A14A01A24", "AD9AD2A24", "AN9AN2A24",
+  "A10A02A24", "A02A03A24", "A30A03A24", "A18A05A24", "A25A02A25"
+];
 
+lonelyAliases.forEach((realCode, index) => {
+  window.messages[`lonely-${index + 1}`] = window.messages[realCode];
+});
+
+
+// Create anxious-1 to anxious-15 aliases
+const anxiousAliases = [
+  "N05N10N23", "N08N10N23", "N14N10N23", "N23N10N23", "N18N11N23",
+  "N02N12N23", "N31N12N23", "N14N01N24", "ND9ND2N24", "NN9NN2N24",
+  "N10N02N24", "N02N03N24", "N30N03N24", "N18N05N24", "N25N02N25"
+];
+
+anxiousAliases.forEach((realCode, index) => {
+  window.messages[`anxious-${index + 1}`] = window.messages[realCode];
+});
+
+const happyAliases = [
+  "H05H10H23", "H08H10H23", "H14H10H23", "H23H10H23", "H18H11H23",
+  "H02H12H23", "H31H12H23", "H14H01H24", "HD9HD2H24", "HN9HN2H24",
+  "H10H02H24", "H02H03H24", "H30H03H24", "H18H05H24", "H25H02H25"
+];
+happyAliases.forEach((realCode, index) => {
+  window.messages[`happy-${index + 1}`] = window.messages[realCode];
+});
+
+const angryAliases = [
+  "L05L10L23", "L08L10L23", "L14L10L23", "L23L10L23", "L18L11L23",
+  "L02L12L23", "L31L12L23", "L14L01L24", "LD9LD2L24", "LN9LN2L24",
+  "L10L02L24", "L02L03L24", "L30L03L24", "L18L05L24", "L25L02L25"
+];
+angryAliases.forEach((realCode, index) => {
+  window.messages[`angry-${index + 1}`] = window.messages[realCode];
+});
+
+const thankfulAliases = [
+  "T05T10T23", "T08T10T23", "T14T10T23", "T23T10T23", "T18T11T23",
+  "T02T12T23", "T31T12T23", "T14T01T24", "TD9TD2T24", "TN9TN2T24",
+  "T10T02T24", "T02T03T24", "T30T03T24", "T18T05T24", "T25T02T25"
+];
+thankfulAliases.forEach((realCode, index) => {
+  window.messages[`thankful-${index + 1}`] = window.messages[realCode];
+});
