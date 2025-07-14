@@ -199,6 +199,14 @@ body.dark h1 {
   color: #e0b3ff;
 }
 
+body.dark h2 {
+  color: #e0b3ff;
+}
+
+body.dark h3 {
+  color: #e0b3ff;
+}
+
 body.dark p {
   color: #ccc;
 }
